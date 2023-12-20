@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/asset/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/asset/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/asset/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/asset/favicon/site.webmanifest">
+    <link rel="stylesheet" href="/addons/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <title>SpiceMunch</title>
+    <style>
+        .img-product{
+            animation: img-product 3s ease 0s 1 normal forwards;
+        }
+        @keyframes img-product{
+            0% {
+                opacity: 0;
+            }
+        
+            100% {
+                opacity: 1;
+            }
+        }
+        .img-header{
+            animation: img-header 7s ease 0s 1 normal forwards;
+          }
+        @keyframes img-header {
+            0% {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+        
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .txt-header{
+            animation: txt-header 5s ease 0s 1 normal forwards;
+        }
+        @keyframes txt-header {
+            0% {
+                opacity: 0;
+                transform: scale(0.6);
+            }
+        
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        li :hover{
+            color: hsla(191, 79%, 32%, 1);
+        }
+        .img-promo{
+            animation: img-promo 7s ease 0s 1 normal forwards;
+        }
+        @keyframes img-promo {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+        
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12" style="background-color: #E35E3C;">
+                <nav class="navbar navbar-expand-md">
+                    <a href="#" class="navbar-brand ms-4">
+                        <img src="./asset/Logo.png" alt="" width="65%" height="auto" style="background-color:white; border-radius:50%;" class="img-fluid">
+                    </a>
+                    <h4 class="position-relative text-white d-none d-sm-block d-flex mt-sm-6" style="left: 5px;">SpiceMunch</h4>
+                    <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler bg-light me-2" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse d-sm-flex justify-content-end me-xxl-4 me-lg-3 me-md-2" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active px-md-2">
+                                <a href="#product" class="nav-link text-white">
+                                    <h5>Product</h5>
+                                </a>
+                            </li>
+                            <li class="nav-item active px-md-4">
+                                <a data-bs-toggle="modal" href="#exampleModalToggle" role="button" class="nav-link text-white">
+                                    <h5>Cart</h5>
+                                </a>
+                            </li>
+                            <li class="nav-item active pe-md-3">
+                                <a href="#contact" class="nav-link text-white">
+                                    <h5>Contact</h5>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container-fluid mb-5">
+            <div class="row">
+                <div class="col-12 d-flex text-white py-3 justify-content-end" style="background-color: #C73B2B;">
+                    <div class="col-6 d-flex justify-content-center mx-auto placeholder-wave">
+                        <h1 class="my-auto fs-5 fs-m-2 fs-md-3 fs-lg-4 fs-xl-4 txt-header">Taste the spiciness in your mouth</h1>
+                    </div>
+                    <div class="col-5">
+                        <img class="img-header" src="/asset/header-icon.png" alt="" width="100%" height="auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid pt-1">
+            <div class="row">
+                <div class="col-12 placeholder-wave">
+                    <h3 class=" text-center mb-3"  id="product"><b>Our Product</b></h3>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Product -->
+    <div class="container-fluid mt-4" style="background-color:#FF9D4F;">
+        <div class="row justify-content-evenly">
+            <div class="col-lg-3 col-6 col-md-3 d-flex justify-content-center pb-md-3 img-product">
+                <div class="col-lg-10 col-12 bg-white rounded-4 mt-3 pt-2">
+                    <div class="col-10 rounded-4 mx-auto" style="background: #FFDB5C;">
+                        <img src="./asset/basreng-pedas.png" alt="" width="90%" height="auto">
+                    </div>
+                    <div class="ms-3 ps-xl-2">
+                        <h5 style="display:flex;"><b>Basreng</b></h5>
+                        <h5 style="position:relative; top:-13px"><b>Pedas</b></h5>
+                        <h6>Rp. 25.000</h6>
+                    </div>
+                    <div class="mx-auto p-md-2 px-lg-0  p-2 ms-1 ms-smm-1 ms-xl-4">
+                        <button onclick="munculkan(1)" class="placeholder-wave px-md-2 px-lg-4 fs-6 fs-sm-6 fs-xl-1 px-xl-4 px-xxl-5 px-mdd-1 text-white border-0 rounded-2" style="background-color:#C73B2B;"><b>ADD TO CARD</b></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6 col-md-3 d-flex justify-content-center pb-md-3 img-product">
+                <div class="col-lg-10 col-12 bg-white rounded-4 mt-3 pt-2">
+                    <div class="col-10 rounded-4 mx-auto" style="background: #FFDB5C;">
+                        <img src="./asset/kripca-pedas.png" alt="" width="90%" height="auto" class="ms-2">
+                    </div>
+                    <div class="ms-3 ps-xl-2">
+                        <h5 style="display:flex;"><b>Kripca</b></h5>
+                        <h5 style="position:relative; top:-11px"><b>Pedas</b></h5>
+                        <h6>Rp. 25.000</h6>
+                    </div>
+                    <div class="mx-auto p-md-2 px-lg-0  p-2 ms-1 ms-smm-1 ms-xl-4">
+                        <button onclick="munculkan(2)" class="placeholder-wave px-md-2 px-lg-4 fs-6 fs-sm-6 fs-xl-1 px-xl-4 px-xxl-5 px-mdd-1 text-white border-0 rounded-2" style="background-color:#C73B2B;"><b>ADD TO CARD</b></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6 col-md-3 d-flex justify-content-center pb-3 img-product">
+                <div class="col-lg-10 col-12 bg-white rounded-4 mt-3 pt-2">
+                    <div class="col-10 rounded-4 mx-auto" style="background: #FFDB5C;">
+                        <img src="./asset/lidi-pedas.png" alt="" width="90%" height="auto" class="ms-2">
+                    </div>
+                    <div class="ms-3 ps-xl-2">
+                        <h5 style="display:flex;"><b>Lidi</b></h5>
+                        <h5 style="position:relative; top:-13px"><b>Pedas</b></h5>
+                        <h6>Rp. 25.000</h6>
+                    </div>
+                    <div class="mx-auto p-md-2 px-lg-0  p-2 ms-1 ms-smm-1 ms-xl-4">
+                        <button onclick="munculkan(3)" class="placeholder-wave px-md-2 px-lg-4 fs-6 fs-sm-6 fs-xl-1 px-xl-4 px-xxl-5 px-mdd-1 text-white border-0 rounded-2" style="background-color:#C73B2B;"><b>ADD TO CARD</b></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6 col-md-3 d-flex justify-content-center pb-3 img-product">
+                <div class="col-lg-10 col-12 bg-white rounded-4 mt-3 pt-2">
+                    <div class="col-10 rounded-4 mx-auto" style="background: #FFDB5C;">
+                        <img src="./asset/makaroni-pedas.png" alt="" width="90%" height="auto" class="ms-2">
+                    </div>
+                    <div class="ms-3 ps-xl-2">
+                        <h5 style="display:flex;"><b>Makaroni</b></h5>
+                        <h5 style="position:relative; top:-13px"><b>Pedas</b></h5>
+                        <h6>Rp. 25.000</h6>
+                    </div>
+                    <div class="mx-auto p-md-2 px-lg-0  p-2 ms-1 ms-smm-1 ms-xl-4">
+                        <button onclick="munculkan(4)" class="placeholder-wave px-md-2 px-lg-4 fs-6 fs-sm-6 fs-xl-1 px-xl-4 px-xxl-5 px-mdd-1 text-white border-0 rounded-2" style="background-color:#C73B2B;"><b>ADD TO CARD</b></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slogan -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex">
+                <div class="col-6">
+                    <img src="./asset/Promotion.png" alt="" width="100%" height="auto" class="img-promo">
+                </div>
+                <div class="col-6 my-auto ms-2 img-header">
+                    <h1 class="fs-xxl-1 fs-lg-1 fs-6 fs-md-1 fs-m-1">Taste the spiciness</h1>
+                    <h1 class="ms-xxl-6 ms-md-6 fs-xxl-1 fs-lg-1 ms-lg-6 fs-6 ms-6 fs-md-1 fs-m-1 ms-m-1">in your mouth</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About -->
+    <div class="container-fluid" style="background-color: #E35E3C;">
+        <div class="row">
+            <div class="col-12 d-flex py-2 justify-content-evenly">
+                <div class="col-4 ms-3 img-promo">
+                    <img src="./asset/about-logo.png" alt="" width="90%" height="auto">
+                </div>
+                <div class="col-6 text-white ms-3 mt-3 mt-md-4 mt-lg-5 mt-xl-6 img-header">
+                    <h1 class="fs-6 fs-md-1 fs-lg-2 fs-xl-2">Who We are ?</h1>
+                    <h5 class="fs-7 fs-md-2 fs-lg-3 fs-xl-3">SpiceMunch is a dynamic and innovative company that specializes in crafting a tantilizing range of spicy snack to excite your taste buds.</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid" style="background-color: #C73B2B;" id="contact">
+        <div class="row">
+            <div class="col-12 pt-4">
+                <div class="col-12">
+                    <img src="/asset/Logo.png" alt="" width="10%" height="auto" style="background-color: white; border-radius:50%;">
+                </div>
+                <div class="col-12 d-flex border-bottom border-2 pb-2">
+                    <div class="col-6 fs-2 d-flex align-items-end">
+                        <a href="https://www.instagram.com/bagussetyo28/" class="me-2 me-md-3 fs-md-3"><i class="bi bi-instagram text-white"></i></a>
+                        <a href="https://m.facebook.com/profile.php/?id=100014431899347&name=xhp_nt__fb__action__open_user" class="me-2 me-md-3 fs-md-3"><i class="bi bi-facebook text-white"></i></i></a>
+                        <a href="https://wa.me/qr/7VTBAABBPV3KH1" class="fs-md-3"><i class="bi bi-whatsapp text-white"></i></a>
+                    </div>
+                    <div class="col-6 col-md-5 col-lg-4 d-flex flex-column text-white offset-md-1 offset-lg-2">
+                        <h5 class="fs-md-6">CONTACT US</h5>
+                        <a href="mailto:spicemunch@gmail.com" class="text-decoration-none"><h5 class="fs-8 fs-md-2 text-white">spicemunch@gmail.com</h5></a>
+                        <h5 class="fs-8 fs-md-2">St. Kenagan, Surabaya</h5>
+                    </div>
+                </div>
+                <div class="col-12 text-white d-flex justify-content-center mt-3">
+                    <p class="fs-md-2">&copy;2023 SpiceMunch. All rightreserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart -->
+    <div>
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content container" style="background-color:#0e1329;">
+                <div class="modal-header row">
+                    <div class="col-12 d-flex justify-content-between text-white">              
+                        <h5 class="modal-title mt-2" id="exampleModalToggleLabel">Cart Details</h5>
+                        <button type="button" class="border-0 text-white fs-3" style="background-color: #0e1329;" data-bs-dismiss="modal" aria-label="Close">&times;</button>
+                    </div>
+                </div>
+                <div class="modal-body row">
+                    <div class="col-12 d-none position-relative justify-content-evenly mb-2" id="cart1">
+                        <div class="col-2 d-flex me-1">
+                            <img src="/asset/basreng-pedas.png" alt="" width="100%" height="auto" class="mx-auto">
+                        </div>
+                        <div class="col-2 text-white text-center my-auto justify-content-center me-3">
+                            <p class="fs-9 fs-m-3 fs-md-5">Basreng Pedas</p>
+                        </div>
+                        <div class="col-2 text-white text-center my-auto me-3">
+                            <p class="fs-9 fs-m-3 fs-md-5">Rp. 25.000</p>
+                        </div>
+                        <div class="col-1 col-md-2 text-center my-auto me-3">
+                            <p class="bg-white rounded-3">5</p>
+                        </div>
+                        <div class="col-3 col-md-2 text-white my-auto">
+                            <p class="fs-9 fs-m-3 fs-md-5">Rp. 125.000</p>
+                        </div>
+                        <div class="col-1 mt-m-1 mt-ssm-1 mt-md-3 mt-lg-2 ms-md-4">
+                            <button onclick="sembunyikan(1)" class="border-0 text-white fs-md-2 fs-lg-3" style="background-color: #0e1329;">&times;</button>
+                        </div>
+                    </div>
+                    <div class="col-12 d-none position-relative justify-content-evenly mb-2" id="cart2">
+                        <div class="col-2 d-flex me-1">
+                            <img src="/asset/kripca-pedas.png" alt="" width="90%" height="auto" class="mx-auto">
+                        </div>
+                        <div class="col-2 text-white text-center my-auto justify-content-center me-3">
+                            <p class="fs-9 fs-m-3 fs-md-5">Kripca Pedas</p>
+                        </div>
+                        <div class="col-2 text-white text-center my-auto me-3">
+                            <p class="fs-9 fs-m- fs-md-5">Rp. 25.000</p>
+                        </div>
+                        <div class="col-1 col-md-2 text-center my-auto me-3">
+                            <p class="bg-white rounded-3">5</p>
+                        </div>
+                        <div class="col-3 col-md-2 text-white my-auto">
+                            <p class="fs-9 fs-m-3 fs-md-5">Rp. 125.000</p>
+                        </div>
+                        <div class="col-1 mt-m-1 mt-ssm-1 mt-md-3 mt-lg-2 ms-md-4">
+                            <button onclick="sembunyikan(2)" class="border-0 text-white fs-md-2 fs-lg-3" style="background-color: #0e1329;">&times;</button>
+                        </div>
+                    </div>
+                    <div class="col-12 d-none position-relative justify-content-evenly mb-2" id="cart3">
+                        <div class="col-2 d-flex me-1">
+                            <img src="/asset/lidi-pedas.png" alt="" width="90%" height="auto" class="mx-auto">
+                        </div>
+                        <div class="col-2 text-white text-center my-auto justify-content-center me-3">
+                            <p class="fs-9 fs-m-3 fs-md-5">Lidi <br> Pedas</p>
+                        </div>
+                        <div class="col-2 text-white text-center my-auto me-3">
+                            <p class="fs-9 fs-m- fs-md-5">Rp. 25.000</p>
+                        </div>
+                        <div class="col-1 col-md-2 text-center my-auto me-3">
+                            <p class="bg-white rounded-3">5</p>
+                        </div>
+                        <div class="col-3 col-md-2 text-white my-auto">
+                            <p class="fs-9 fs-m-3 fs-md-5">Rp. 125.000</p>
+                        </div>
+                        <div class="col-1 mt-m-1 mt-ssm-1 mt-md-3 mt-lg-2 ms-md-4">
+                            <button onclick="sembunyikan(3)" class="border-0 text-white fs-md-2 fs-lg-3" style="background-color: #0e1329;">&times;</button>
+                        </div>
+                    </div>
+                    <div class="col-12 d-none position-relative justify-content-evenly" id="cart4">
+                        <div class="col-2 d-flex me-1">
+                            <img src="/asset/makaroni-pedas.png" alt="" width="85%" height="auto" class="mx-auto">
+                        </div>
+                        <div class="col-2 text-white text-center my-auto justify-content-center me-3">
+                            <p class="fs-9 fs-m-3 fs-md-5">Makaroni Pedas</p>
+                        </div>
+                        <div class="col-2 text-white text-center my-auto me-3">
+                            <p class="fs-9 fs-m- fs-md-5">Rp. 25.000</p>
+                        </div>
+                        <div class="col-1 col-md-2 text-center my-auto me-3">
+                            <p class="bg-white rounded-3">5</p>
+                        </div>
+                        <div class="col-3 col-md-2 text-white my-auto">
+                            <p class="fs-9 fs-m-3 fs-md-5">Rp. 125.000</p>
+                        </div>
+                        <div class="col-1 mt-m-1 mt-ssm-1 mt-md-3 mt-lg-2 ms-md-4">
+                            <button onclick="sembunyikan(4)" class="border-0 text-white fs-md-2 fs-lg-3" style="background-color: #0e1329;">&times;</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer row">
+                    <div class="col-12 text-white">
+                        <h5>Payment Method</h5>
+                    </div>
+                    <div class="col-12 d-flex">
+                        <input checked type="radio" name="Payment_Method" id="COD" class="my-auto"><label for="COD" class="my-auto text-white ms-2 fs-9 fs-m-3 fs-md-5">Cash On Delivery</label>
+                        <input disabled type="radio" name="Payment_Method" id="Credit" class="my-auto ms-4"><label for="Credit" class="my-auto text-white ms-2 fs-9 fs-m-3 fs-md-5">Credit or debit card</label>
+                        <input disabled type="radio" name="Payment_Method" id="GoPay" class="my-auto ms-4"><label for="GoPay" class="my-auto text-white ms-2 fs-9 fs-m-3 fs-md-5">GoPay</label>
+                    </div>
+                    <div class="col-12 d-flex justify-content-end">
+                        <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Checkout</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered container">
+                <div class="modal-content modal-background row">
+                    <div class="modal-header col-12 border-bottom-0">
+                        <div class="col-12 d-flex justify-content-center text-white fw-bold text-uppercase">
+                            <h2 class="fs-md-6">Payment Complete</h2>
+                        </div>
+                    </div>
+                    <div class="modal-body text-center justify-content-center col-12 d-flex">
+                        <div class="col-12 col-xl-4 my-xl-auto">
+                            <i class="bi bi-check-circle-fill text-white fs-1 fs-md-7 d-xl-none"></i>
+                            <img src="/asset/Payment.png" alt="" class="d-none img-product d-xl-block" width="100%" height="auto">
+                        </div>
+                    </div>
+                    <div class="col-12 text-center text-secondary">
+                        <h6 class="fs-md-2 fs-lg-3">Payment Successfully Submitted</h6>
+                    </div>
+                    <div class="modal-footer border-0 col-12 justify-content-center">
+                        <button type="button" class="btn bg-success col-12 col-md-10 text-white fs-md-8" data-bs-dismiss="modal">Continue Shopping</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script src="/addons/script.js"></script>
+</body>
+</html>
